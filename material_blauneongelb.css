@@ -68,23 +68,37 @@ h1 {
 /* Mobile */
 @media (max-width: 600px) {
 
+    /* Bio */
     .bio {
-        top: 12px;              /* kleiner Abstand nach oben */
+        top: 12px;
         left: 15px;
-        right: 15px;            /* verhindert Abschneiden rechts */
+        right: 15px;
         font-size: 2.0em;
         line-height: 1.25;
         text-align: left;
-        white-space: normal;    /* Umbruch erlaubt */
+        white-space: normal;
     }
 
+    /* Impressum als Sticky-Header */
     .impressum {
-        bottom: 5px;            /* kleiner Abstand unten */
-        left: 15px;             /* linksbündig auf Mobile */
-        right: auto;            /* Desktop-Right aufheben */
+        position: sticky;       /* oben fixiert beim Scrollen */
+        top: 0;
+        left: 0;
+        right: 0;
+        background: transparent; /* blauer Body-Hintergrund bleibt sichtbar */
+        z-index: 1;             /* Text scrollt über Impressum */
+        padding: 10px 15px;
         font-size: 2.0em;
         line-height: 1.2;
         text-align: left;
         white-space: normal;
+    }
+
+    /* Haupttext startet unterhalb, scrollt über Impressum */
+    main {
+        margin-top: 80px;       /* Start unter Impressum */
+        padding: 0 15px;
+        position: relative;
+        z-index: 2;             /* scrollt über Impressum */
     }
 }
