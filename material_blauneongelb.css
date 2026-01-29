@@ -98,7 +98,7 @@ h1 {
 
     /* Haupttext scrollt darunter */
     main {
-        margin-top: 60px;        /* unter Bio starten */
+        margin-top: 80px;        /* unter Bio starten */
         margin-bottom: 0;        /* scrollt direkt bis unter Impressum, bleibt aber dahinter */
         padding: 0 15px;
         position: relative;
